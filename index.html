@@ -36,13 +36,13 @@
                     <a class="nav-link" href="#id-services">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Skills</a>
+                    <a class="nav-link" href="#id-my-skills">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link" href="#id-project">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#id-contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -372,6 +372,34 @@
             </a>
         </div>
     </div>
+</div>
+
+<div class="container" id="id-contact">
+    <script>
+        // write to js file
+            const fs = require('fs')
+
+            const content = 'this is what i want to write to file'
+
+            fs.writeFile('/Assets/text.txt', content, err => {
+            if (err) {
+                console.error(err)
+                return
+            }
+            //file written successfully
+            })
+    </script>
+    
+    // HTML
+    <form onSubmit="WriteToFile(this)" class="form-group">
+    <label for="fullName">Full name:</label>
+    <input type="text" name="fullName" id="fullName" size="20" placeholder="Full Name">
+     
+    <label for="email">Email: </label>
+    <input type="text" name="email" id="email" size="20">
+     
+    <input type="submit" value="submit">
+    </form>
 </div>
 
 <script src="main.js"></script>
