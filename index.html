@@ -58,13 +58,14 @@
                 <h1>
                     Maloy Baroi
                 </h1>
-                A Web Based Software Developer
+                A Full Stack Software Engineer
             </div>
             <div class="mt-2">
                 <p>
-                    <a href="https://www.fiverr.com/maloy_baroi?up_rollout=true" target="_blank"
-                       class="btn btn-hire-me py-3 px-4">
-                        Hire me
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=maloy.baroi.1998@gmail.com&su=Hire%20Me%20Inquiry&body=Hello,%0D%0A%0D%0AI%20am%20interested%20in%20your%20services.%0D%0A%0D%0APlease%20contact%20me.%0D%0A%0D%0AThank%20you!" 
+                        class="btn btn-hire-me" 
+                        target="_blank">
+                            Hire me (Gmail)
                     </a>
                     &nbsp;
                     &nbsp;
@@ -103,6 +104,8 @@
                         </div>
                         <p>
                         <div class="quality-equation">
+                            — Never think you are not capable of doing anything because of you are not a talented person.
+                            If Quality is a function, <br>
                             <h1>Q =</h1>
                             <h1>{</h1>
                             <h2>K</h2>,&nbsp
@@ -115,8 +118,6 @@
                                 // K = Knowledge, P = Practice, T = Talent
                             </small>
                         </div>
-                        Never think you are not capable of doing anything because of you are not a talented person.
-                            If Quality is a function, <br>
                         <br> — While talent may have a genetic basis and thus lie beyond our control, it is ultimately less significant than the knowledge we acquire and the effort we invest through consistent practice.
                         </p>
                     </article>
@@ -425,5 +426,45 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+<script>
+        function redirectToGmail() {
+            const email = 'your-email@example.com';
+            const subject = 'Hire Me Inquiry';
+            const body = `Hello,
+
+I am interested in your services.
+
+Please contact me.
+
+Thank you!`;
+            
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            window.open(gmailUrl, '_blank');
+        }
+        
+        function showEmailOptions() {
+            const email = 'your-email@example.com';
+            const subject = 'Hire Me Inquiry';
+            const body = `Hello,
+
+                        I am interested in your services.
+
+                        Please contact me.
+
+                        Thank you!`;
+            const choice = confirm("Choose your email service:\nOK = Gmail\nCancel = Default email client");
+            
+            if (choice) {
+                // Gmail
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.open(gmailUrl, '_blank');
+            } else {
+                // Default email client
+                const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = mailtoUrl;
+            }
+        }
+    </script>
 </body>
 </html>
